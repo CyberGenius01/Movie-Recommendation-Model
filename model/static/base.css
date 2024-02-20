@@ -172,7 +172,12 @@ h1 {
     display: flex;
 }
 
-
+.radio{
+    list-style-type: none;
+    display : flex;
+    justify-content: center;
+    gap: 20px
+}
 
 .card {
     width: 280px;
