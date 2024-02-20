@@ -309,7 +309,6 @@ div[class^='card-text'] {
         font-size: 12px !important;
     }
     .radio{
-        font-size: 15px !important;
         justify-content: left !important;
         gap: 8px !important;
     }
@@ -318,8 +317,12 @@ div[class^='card-text'] {
     }
     label[for^=category] {
         cursor: pointer;
+        font-size: 15px !important;
     }
     .search-icon{
         display: none;
+    }
+    .submit{
+        padding: 5px 8px!important;
     }
 }
