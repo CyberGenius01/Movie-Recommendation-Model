@@ -76,7 +76,7 @@ h1 {
     font-weight: bolder !important;
     border: none;
     background: rgb(123,158,1);
-    background: linear-gradient(110.1deg, rgb(34, 126, 34) 2.9%, rgb(168, 251, 60) 90.3%);
+    background: linear-gradient(135deg, rgb(121, 241, 164) 10%, rgb(14, 92, 173) 100%);
     cursor: pointer;
 }
 
@@ -98,7 +98,7 @@ h1 {
     justify-content: right;
     align-items: center;
     background: rgb(123,158,1);
-    background: linear-gradient(110.1deg, rgb(34, 126, 34) 2.9%, rgb(168, 251, 60) 90.3%);
+    background: linear-gradient(135deg, rgb(121, 241, 164) 10%, rgb(14, 92, 173) 100%);
     border: none;
     border-radius: 50px;
     cursor: pointer;
