@@ -307,12 +307,7 @@ div[class^='card-text'] {
             margin: 0 !important;
             padding: 0 !important;
         }
-    .nav-title{
-        display: none;
-        font-size: 18px !important;
-        font-weight: 700;
-    }
-    .submit {
+    .nav-title, .submit {
         font-size: 18px !important;
         font-weight: 700;
     }
