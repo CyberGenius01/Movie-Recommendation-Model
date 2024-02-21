@@ -297,12 +297,12 @@ div[class^='card-text'] {
         font-size: 15px;
     }
     .nav-view {
-        width: fit-content !important;
+        max-width: fit-content !important;
         height: 30px !important;
     }
         .nav-view > div {
             margin: 0 !important;
-            padding: 5px 10px;
+            padding: 0 !important;
         }
     .nav-title, .submit {
         font-size: 18px !important;
@@ -327,7 +327,7 @@ div[class^='card-text'] {
         display: none;
     }
     .submit{
-        padding: 2px 3px!important;
+        padding: 5px 8px!important;
     }
     .container {
         column-gap: 15px;
