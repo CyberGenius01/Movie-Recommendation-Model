@@ -297,7 +297,7 @@ div[class^='card-text'] {
         font-size: 15px;
     }
     .nav-view {
-        max-width: fit-content !important;
+        width: 40px !important;
         height: 30px !important;
     }
         .nav-view > div {
