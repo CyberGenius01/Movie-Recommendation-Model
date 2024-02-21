@@ -1,8 +1,7 @@
 const filterbtn = document.querySelector('.nav-view');
 const navDropBox = document.querySelector('.nav-drop');
-
 let j = 0;
-filterbtn.addEventListener('click', () => {
+/*filterbtn.addEventListener('click', () => {
     if (j % 2 == 0) {
         navDropBox.style.display = 'block';
         j++;
@@ -10,8 +9,28 @@ filterbtn.addEventListener('click', () => {
         navDropBox.style.display = 'none';
         j++;
     }
-    console.log(navDropBox.style.display)
-})
+});
+*/
+console.log(j);
+document.addEventListener('click', (e) => {
+    if (j % 2 == 0) {
+        if ((e.target === navDropBox ||
+            e.target.parentElement.parentElement === navDropBox ||
+            e.target.parentElement.parentElement.parentElement === navDropBox ||
+            e.target.parentElement.parentElement.parentElement.parentElement === navDropBox) &&
+            (e.target === filterbtn ||
+                e.target.parentElement === filterbtn ||
+                e.target.parentElement.parentElement === filterbtn)) {
+            console.log(e.target);
+            navDropBox.style.display = 'block';
+        }
+    } else {
+        console.log(e.target);
+        navDropBox.style.display = 'none';
+        j++;
+    }
+});
+
 
 const hearts = document.querySelectorAll('.heart-svg');
 hearts.forEach(heart => {
@@ -33,4 +52,5 @@ document.addEventListener('load', () => {
     html.innerHTML = cleanHTML;
 
 })
+
 
