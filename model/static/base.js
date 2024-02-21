@@ -1,33 +1,42 @@
 const filterbtn = document.querySelector('.nav-view');
 const navDropBox = document.querySelector('.nav-drop');
 let j = 0;
-/*filterbtn.addEventListener('click', () => {
-    if (j % 2 == 0) {
-        navDropBox.style.display = 'block';
-        j++;
-    } else {
-        navDropBox.style.display = 'none';
-        j++;
-    }
-});
-*/
-console.log(j);
+function checkNavDrop(e) {
+    return (e.target === navDropBox ||
+        e.target.parentElement === navDropBox ||
+        e.target.parentElement.parentElement === navDropBox ||
+        e.target.parentElement.parentElement.parentElement === navDropBox ||
+        e.target.parentElement.parentElement.parentElement.parentElement === navDropBox)
+}
+
 document.addEventListener('click', (e) => {
     if (j % 2 == 0) {
-        if ((e.target === navDropBox ||
-            e.target.parentElement.parentElement === navDropBox ||
-            e.target.parentElement.parentElement.parentElement === navDropBox ||
-            e.target.parentElement.parentElement.parentElement.parentElement === navDropBox) &&
-            (e.target === filterbtn ||
-                e.target.parentElement === filterbtn ||
-                e.target.parentElement.parentElement === filterbtn)) {
-            console.log(e.target);
+        if (checkNavDrop(e)) {
             navDropBox.style.display = 'block';
         }
+        if (e.target === filterbtn ||
+            e.target.parentElement === filterbtn ||
+            e.target.parentElement.parentElement === filterbtn ||
+            e.target.parentElement.parentElement.parentElement === filterbtn) {
+            navDropBox.style.display = 'block';
+            j++;
+            console.log(j);
+            }
     } else {
-        console.log(e.target);
-        navDropBox.style.display = 'none';
-        j++;
+        try {
+            if (checkNavDrop(e)) {
+                navDropBox.style.display = 'block';
+            } else {
+                console.log(e.target);
+                navDropBox.style.display = 'none';
+                j++;
+                console.log(j);
+            }
+        } catch (error) {
+            navDropBox.style.display = 'none';
+            j++;
+            console.log(j);
+        }
     }
 });
 
