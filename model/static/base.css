@@ -327,10 +327,13 @@ div[class^='card-text'] {
         display: none;
     }
     .submit{
-        padding: 5px 8px!important;
+        padding: 2px 3px!important;
     }
     .container {
         column-gap: 15px;
         row-gap: 10px;
+    }
+    div[class^='card-text'] {
+        font-size: 14px;
     }
 }
